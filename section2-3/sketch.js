@@ -5,7 +5,7 @@ function setup(){
   createCanvas(100, 100);
   for(let i = 0; i < 10; i++){
     for(let j = 0; j < 10; j++){
-      fill(j % 2 == 1 ? 254 : 0); // ここを変えます
+      fill(j % 2 == 1 ? 255 : 0); // ここを変えます
       console.log(i, j);
       rect(j * 10, i * 10, 5, 5);
     }
