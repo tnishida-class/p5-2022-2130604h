@@ -12,8 +12,8 @@ function draw(){
   count = (count + 1) % cycle;
   // BLANK[1]
   let size = count
-  if(size <75){size = 70}
-  if(keyIsDown("A".charCodeAt(0))){count = 2 * (count + 1) % cycle}
+  if(size <80){size = 70}
+  if(keyIsDown(" ".charCodeAt(0))){count = 2 * (count + 1) % cycle}
   ellipse(width / 2, height / 2, size);
 
 }
