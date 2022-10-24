@@ -7,8 +7,8 @@ function setup(){
   createCanvas(windowWidth, windowHeight);
   x = width / 2;
   y = height / 2;
-  vx = 8;
-  vy = 8;
+  vx = 3;
+  vy = 3;
 }
 
 function draw(){
@@ -17,6 +17,10 @@ function draw(){
   x += vx;
   y += vy;
 
+  if(keyIsDown(LEFT_ARROW)){ x -= 10; }
+  if(keyIsDown(RIGHT_ARROW)){ x += 10; }
+  if(keyIsDown(" ".charCodeAt(0))){ y -= 30; }
+  
   // 重力（コメント機能でオンオフ切り替えて実行してみましょう）
   vy = constrain(vy + g, -vyMax, vyMax);
 
