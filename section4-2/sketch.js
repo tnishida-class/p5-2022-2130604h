@@ -13,7 +13,7 @@ function draw(){
   background(160, 192, 255);
   for(let i = 0; i < balls.length; i++){
     let b = balls[i];
-    ellipse(b.x, b.y, b.size);
+    ellipse(b.x, b.y, b.size);//ここのbを外せば何とかなる？
     b.x += b.vx;
     b.y += b.vy;
   }
