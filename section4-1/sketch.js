@@ -65,6 +65,7 @@ function setup(){
      fill(0);
     text(scores[i].toPrecision(3), i * dx, height - h);
   }
+  
   stroke(0,255,0);
   //line(0, height*average/ 100,width, height*average/100 );
   const a = height * average/100;
