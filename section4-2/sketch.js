@@ -13,20 +13,20 @@ function draw(){
   background(160, 192, 255);
   for(let i = 0; i < balls.length; i++){
     let b = balls[i];
-    ellipse(b.x, b.y, b.size);//ここのbを外せば何とかなる？
+    ellipse(width/2+ b.x, height/2+b.y, b.size);
     b.x += b.vx;
     b.y += b.vy;
   }
+
+
+let count = 0;
+let cycle = 10;
+count = (count + 1) % cycle;
+const b = { x: 1, y: 1, size: random(10,60), vx:random(-10,10) , vy:random(-10,10) };
+balls.push(b);
+
 }
 
-function mouseDragged(){
-  const dx = mouseX - pmouseX;
-  const dy = mouseY - pmouseY;
-  if(mag(dx, dy) > 5){
-    const b = { x: mouseX, y: mouseY, size: 20, vx: dx, vy: dy };
-    balls.push(b);
-  }
-}
 
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
