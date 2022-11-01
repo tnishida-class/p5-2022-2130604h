@@ -6,8 +6,10 @@ function setup(){
   fill(0);
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
+ 
   star(250, 50, 40);
-  regularPolygon(350,50,80);
+  let N = random(5,20);
+  regularPolygon(N, 350, 50, 40);
 }
 
 function crossmark(x1, y1, x2, y2){
@@ -36,11 +38,11 @@ function star(cx, cy, r){
   endShape(CLOSE);
 }
 
-function regularPolygon(cx, cy, r){
+function regularPolygon(n, cx, cy, r){
   beginShape();
   
-  for(var i = 0; i < 5; i++){
-    let theta = TWO_PI * i * 2 ;
+  for(let i = 0; i < n; i++){
+    let theta = TWO_PI * i  /n;
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
     vertex(x,y);
