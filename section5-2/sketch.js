@@ -8,7 +8,8 @@ function setup(){
   ngmark(150, 50, 80);
  
   star(250, 50, 40);
-  let N = random(5,20);
+  let N = int(random(3,20));
+  //noFill();
   regularPolygon(N, 350, 50, 40);
 }
 
@@ -42,7 +43,7 @@ function regularPolygon(n, cx, cy, r){
   beginShape();
   
   for(let i = 0; i < n; i++){
-    let theta = TWO_PI * i  /n;
+    let theta = TWO_PI * i  /n ;
     let x = cx + cos(theta) * r;
     let y = cy + sin(theta) * r;
     vertex(x,y);
