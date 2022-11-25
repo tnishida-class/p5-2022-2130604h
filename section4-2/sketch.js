@@ -22,7 +22,7 @@ function draw(){
 let count = 0;
 let cycle = 10;
 count = (count + 1) % cycle;
-const b = { x: 1, y: 1, size: random(10,60), vx:random(-10,10) , vy:random(-10,10) };
+const b = { x: 1, y: 1, size: random(10,60), vx:random(-10,10), vy:random(-10,10) };
 balls.push(b);
 
 }
