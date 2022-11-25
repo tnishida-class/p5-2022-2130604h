@@ -3,6 +3,7 @@
 function setup(){
   createCanvas(200, 200);
   background(18,49,243);
+  noStroke();
   for(let i = 0; i < 12; i++){
     let theta = TWO_PI * i / 12;
     let x = 100 + cos(theta) * 50;
