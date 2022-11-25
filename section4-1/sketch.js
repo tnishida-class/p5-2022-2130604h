@@ -70,7 +70,7 @@ function setup(){
   //line(0, height*average/ 100,width, height*average/100 );
   const a = height * average/100;
   line(0,height- a,width,height- a );
-  fill(0);
+  noStroke();
   text(average.toPrecision(3), 0, height - a);
   // BLANK[5] 平均点の線を引きます
   
