@@ -14,6 +14,8 @@ function setup(){
 
 function draw(){
   background(160, 192, 255);
+  fill(200);
+  text('h', x,y);
   ellipse(x, y, 30);
   if(!grabbed){ // つかんでいないときだけアニメーションさせる
     x += vx;
